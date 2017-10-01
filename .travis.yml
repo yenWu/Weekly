@@ -3,6 +3,7 @@ os: linux
 
 language: python
 python:
+  - "3.4"
   - "3.5"
   - "3.6"
 
@@ -13,15 +14,15 @@ python:
 # addons: true
 
 # Option
-cache: true
+#cache: true
 
-before_install: true # Skip this phase
+#before_install: true # Skip this phase
 
 # command to install dependencies
 install: true
 #  - ./install-dependencies.sh
 
-before_script: true
+#before_script: true
 
 script:
   - python -m unittest -v \
@@ -31,7 +32,7 @@ script:
         # tests.reader_test
 
 # Option for cleaning up cache
-before_cache: true
+#before_cache: true
 
 #after_success:
 #  - echo "Here is CI result: $TRAVIS_TEST_RESULT"
@@ -39,12 +40,12 @@ before_cache: true
 #  - echo "Here is CI result: $TRAVIS_TEST_RESULT"
 
 # Option
-before_deploy: true
+#before_deploy: true
 
 # Option
-deploy: true
+#deploy: true
 
 # Option
-after_deploy: true
+#after_deploy: true
 
-after_script: true
+#after_script: true
