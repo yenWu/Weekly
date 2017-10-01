@@ -1,0 +1,50 @@
+sudo: enabled
+os: linux
+
+language: python
+python:
+  - "3.5"
+  - "3.6"
+
+# Complete build lifecycle
+#   Ref: https://docs.travis-ci.com/user/customizing-the-build/
+
+# Option
+# addons: true
+
+# Option
+cache: true
+
+before_install: true # Skip this phase
+
+# command to install dependencies
+install: true
+#  - ./install-dependencies.sh
+
+before_script: true
+
+script:
+  - python -m unittest -v \
+        tests.scheduler_test \
+        tests.roulette_test
+        # tests.mail_test
+        # tests.reader_test
+
+# Option for cleaning up cache
+before_cache: true
+
+#after_success:
+#  - echo "Here is CI result: $TRAVIS_TEST_RESULT"
+#after_failure:
+#  - echo "Here is CI result: $TRAVIS_TEST_RESULT"
+
+# Option
+before_deploy: true
+
+# Option
+deploy: true
+
+# Option
+after_deploy: true
+
+after_script: true
