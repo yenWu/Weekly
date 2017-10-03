@@ -25,9 +25,7 @@ install: true
 #before_script: true
 
 script:
-  - python -m unittest -v \
-        tests.scheduler_test \
-        tests.roulette_test
+  - python -m unittest -v tests.scheduler_test tests.roulette_test
         # tests.mail_test
         # tests.reader_test
 
